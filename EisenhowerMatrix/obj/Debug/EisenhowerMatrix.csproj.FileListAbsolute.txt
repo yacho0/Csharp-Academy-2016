@@ -1,0 +1,14 @@
+c:\users\jan\documents\visual studio 2015\Projects\EisenhowerMatrix\EisenhowerMatrix\bin\Debug\EisenhowerMatrix.exe.config
+c:\users\jan\documents\visual studio 2015\Projects\EisenhowerMatrix\EisenhowerMatrix\bin\Debug\EisenhowerMatrix.exe
+c:\users\jan\documents\visual studio 2015\Projects\EisenhowerMatrix\EisenhowerMatrix\bin\Debug\EisenhowerMatrix.pdb
+c:\users\jan\documents\visual studio 2015\Projects\EisenhowerMatrix\EisenhowerMatrix\obj\Debug\EisenhowerMatrix.csprojResolveAssemblyReference.cache
+c:\users\jan\documents\visual studio 2015\Projects\EisenhowerMatrix\EisenhowerMatrix\obj\Debug\MainWindow.g.cs
+c:\users\jan\documents\visual studio 2015\Projects\EisenhowerMatrix\EisenhowerMatrix\obj\Debug\App.g.cs
+c:\users\jan\documents\visual studio 2015\Projects\EisenhowerMatrix\EisenhowerMatrix\obj\Debug\EisenhowerMatrix_MarkupCompile.cache
+c:\users\jan\documents\visual studio 2015\Projects\EisenhowerMatrix\EisenhowerMatrix\obj\Debug\EisenhowerMatrix_MarkupCompile.lref
+c:\users\jan\documents\visual studio 2015\Projects\EisenhowerMatrix\EisenhowerMatrix\obj\Debug\MainWindow.baml
+c:\users\jan\documents\visual studio 2015\Projects\EisenhowerMatrix\EisenhowerMatrix\obj\Debug\EisenhowerMatrix.g.resources
+c:\users\jan\documents\visual studio 2015\Projects\EisenhowerMatrix\EisenhowerMatrix\obj\Debug\EisenhowerMatrix.Properties.Resources.resources
+c:\users\jan\documents\visual studio 2015\Projects\EisenhowerMatrix\EisenhowerMatrix\obj\Debug\EisenhowerMatrix.csproj.GenerateResource.Cache
+c:\users\jan\documents\visual studio 2015\Projects\EisenhowerMatrix\EisenhowerMatrix\obj\Debug\EisenhowerMatrix.exe
+c:\users\jan\documents\visual studio 2015\Projects\EisenhowerMatrix\EisenhowerMatrix\obj\Debug\EisenhowerMatrix.pdb

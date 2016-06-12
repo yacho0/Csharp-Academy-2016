@@ -1,0 +1,71 @@
+﻿<Window x:Class="EisenhowerMatrix.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EisenhowerMatrix"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <ListView Name="ListView1" Grid.Column="0" Grid.Row="1" ItemsSource="{Binding TaskList1}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="1) Urgent and important" DisplayMemberBinding="{Binding Task}"/>
+                    <GridViewColumn Header="Feature" DisplayMemberBinding="{Binding FeatureOfTask}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView Name="ListView2" Grid.Column="1" Grid.Row="1" ItemsSource="{Binding TaskList2}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="2) Important" DisplayMemberBinding="{Binding Task}"/>
+                    <GridViewColumn Header="Feature" DisplayMemberBinding="{Binding FeatureOfTask}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView Name="ListView3" Grid.Column="0" Grid.Row="2" ItemsSource="{Binding TaskList3}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="3) Urgent and not important" DisplayMemberBinding="{Binding Task}"/>
+                    <GridViewColumn Header="Feature" DisplayMemberBinding="{Binding FeatureOfTask}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView Name="ListView4" Grid.Column="1" Grid.Row="2" ItemsSource="{Binding TaskList4}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="4) Less important" DisplayMemberBinding="{Binding Task}"/>
+                    <GridViewColumn Header="Feature" DisplayMemberBinding="{Binding FeatureOfTask}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <StackPanel Grid.Column="0" Grid.Row="0" Margin="20,5">
+            <StackPanel Orientation="Horizontal">
+                <TextBox Name="TaskTextBox" Width="150" Margin="10,5"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="0">
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Add" Name="AddButton" Margin="10,5" Click="AddButton_Click"/>
+                <Button Content="Delete" Name="DeleteButton" Margin="10,5" Click="DeleteButton_Click"/>
+                <ComboBox Name="NumberComboBox" Margin="10,5"/>
+                <ComboBox Name="FOTComboBox" Margin="10,5"/>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Age"/>
+                    <Button Width="20" Content="-" Click="MinusButton_Click"/>
+                    <TextBox Name="AgeTextBox" Width="50" Text="{Binding Path=Age}"/>
+                    <Button Width="20" Content="+" Click="PlusButton_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
