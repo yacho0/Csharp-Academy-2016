@@ -51,15 +51,16 @@
         <StackPanel Grid.Column="0" Grid.Row="0" Margin="20,5">
             <StackPanel Orientation="Horizontal">
                 <TextBox Name="TaskTextBox" Width="150" Margin="10,5"/>
+                <Button Content="Add" Name="AddButton" Margin="10,5" Click="AddButton_Click"/>
+                <Button Content="Delete" Name="DeleteButton" Margin="10,5" Click="DeleteButton_Click"/>
+                <Button Content="Clr all"  Name="ClearButton" Width="40" Margin="10,5" Click="ClearButton_Click"/>
             </StackPanel>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="0">
-            <StackPanel Orientation="Horizontal">
-                <Button Content="Add" Name="AddButton" Margin="10,5" Click="AddButton_Click"/>
-                <Button Content="Delete" Name="DeleteButton" Margin="10,5" Click="DeleteButton_Click"/>
+            <StackPanel Orientation="Horizontal" Margin="10,5">
                 <ComboBox Name="NumberComboBox" Margin="10,5"/>
                 <ComboBox Name="FOTComboBox" Margin="10,5"/>
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal" Margin="10,5">
                     <Label Content="Age"/>
                     <Button Width="20" Content="-" Click="MinusButton_Click"/>
                     <TextBox Name="AgeTextBox" Width="50" Text="{Binding Path=Age}"/>

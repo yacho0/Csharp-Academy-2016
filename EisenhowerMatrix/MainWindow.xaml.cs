@@ -145,6 +145,12 @@ namespace EisenhowerMatrix
             settings.Age++;
         }
 
-
+        private void ClearButton_Click(object sender, RoutedEventArgs e)
+        {
+            TaskList1.Clear();
+            TaskList2.Clear();
+            TaskList3.Clear();
+            TaskList4.Clear();
+        }
     }
 }
