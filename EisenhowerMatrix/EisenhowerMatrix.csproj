@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Matrix.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="ShowText.cs" />
     <Compile Include="SuperShowText.cs" />

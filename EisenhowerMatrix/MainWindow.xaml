@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EisenhowerMatrix"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="900">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -65,6 +65,9 @@
                     <Button Width="20" Content="-" Click="MinusButton_Click"/>
                     <TextBox Name="AgeTextBox" Width="50" Text="{Binding Path=Age}"/>
                     <Button Width="20" Content="+" Click="PlusButton_Click"/>
+                    <Button Content="Red" Name="RedButton" Margin="10,5" Click="RedButton_Click" />
+                    <Button Content="Blue" Name="BlueButton" Margin="10,5" Click="BlueButton_Click"/>
+                    <Button Content="White" Name="WhiteButton" Margin="10,5" Click="WhiteButton_Click"/>
                 </StackPanel>
             </StackPanel>
         </StackPanel>

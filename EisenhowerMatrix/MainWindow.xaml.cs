@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Serialization;
 
 namespace EisenhowerMatrix
 {
@@ -49,8 +51,6 @@ namespace EisenhowerMatrix
 
 
             // tmp = (Colors)Enum.Parse(typeof(Colors),ColorComboBox.Text);
-            //this.Background = Brushes.Blue;
-
 
             this.AgeTextBox.DataContext = settings;
 
@@ -151,6 +151,21 @@ namespace EisenhowerMatrix
             TaskList2.Clear();
             TaskList3.Clear();
             TaskList4.Clear();
+        }
+
+        private void RedButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Background = Brushes.Red;
+        }
+
+        private void BlueButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Background = Brushes.Blue;
+        }
+
+        private void WhiteButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Background = Brushes.White;
         }
     }
 }
