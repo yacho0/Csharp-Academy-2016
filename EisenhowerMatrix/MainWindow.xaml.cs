@@ -22,10 +22,10 @@ namespace EisenhowerMatrix
 
     public partial class MainWindow : Window
     {
-        public ObservableCollection<Helper> TaskList1 { get; set; }
-        public ObservableCollection<Helper> TaskList2 { get; set; }
-        public ObservableCollection<Helper> TaskList3 { get; set; }
-        public ObservableCollection<Helper> TaskList4 { get; set; }
+        public ObservableCollection<Quarter> TaskList1 { get; set; }
+        public ObservableCollection<Quarter> TaskList2 { get; set; }
+        public ObservableCollection<Quarter> TaskList3 { get; set; }
+        public ObservableCollection<Quarter> TaskList4 { get; set; }
         public Settings settings;
 
         public int[] NumberList = { 1, 2, 3, 4 };
@@ -35,10 +35,10 @@ namespace EisenhowerMatrix
             InitializeComponent();
             this.DataContext = this;
 
-            TaskList1 = new ObservableCollection<Helper>();
-            TaskList2 = new ObservableCollection<Helper>();
-            TaskList3 = new ObservableCollection<Helper>();
-            TaskList4 = new ObservableCollection<Helper>();
+            TaskList1 = new ObservableCollection<Quarter>();
+            TaskList2 = new ObservableCollection<Quarter>();
+            TaskList3 = new ObservableCollection<Quarter>();
+            TaskList4 = new ObservableCollection<Quarter>();
             this.settings = new Settings();
 
 
@@ -63,7 +63,7 @@ namespace EisenhowerMatrix
             string taskTemp = this.TaskTextBox.Text;
             FeaturesOfTask featureoftask = (FeaturesOfTask)Enum.Parse(typeof(FeaturesOfTask), this.FOTComboBox.Text);
 
-            Helper tmp = new Helper(taskTemp, featureoftask);
+            Quarter tmp = new Quarter(taskTemp, featureoftask);
 
             int flag = int.Parse(NumberComboBox.Text);
 

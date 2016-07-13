@@ -9,16 +9,16 @@ namespace EisenhowerMatrix
     
     public enum FeaturesOfTask { personal, work}
 
-    public class Helper
+    public class Quarter
     {
         public string Task { get; set; }
         public FeaturesOfTask FeatureOfTask { get; set; }
 
-        public Helper (string task, FeaturesOfTask featureoftask)
+        public Quarter (string task, FeaturesOfTask featureoftask)
         {
             this.Task = task;
-            this.FeatureOfTask = featureoftask;
-
+            // i thign better to use in Task class
+            this.FeatureOfTask = featureoftask;     
         }
     }
 }
