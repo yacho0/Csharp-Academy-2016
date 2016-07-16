@@ -58,8 +58,7 @@ namespace EisenhowerMatrix
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            int numberstask;
-            numberstask = 0;
+            int numberstask = 0;
             
             string taskTemp = this.TaskTextBox.Text;
 

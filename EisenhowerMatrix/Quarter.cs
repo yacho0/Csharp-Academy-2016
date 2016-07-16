@@ -22,7 +22,7 @@ namespace EisenhowerMatrix
             this.FeatureOfTask = featureoftask;   
         }
 
-        // Using polymorphism
+        // Polymorphism. Using the same function with diffrent typs parameters
         public Quarter (int task, FeaturesOfTask featureoftask)
         {
             MessageBox.Show("You have entered the same number", "Warning");
