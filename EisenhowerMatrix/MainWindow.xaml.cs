@@ -58,12 +58,30 @@ namespace EisenhowerMatrix
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-
-
+            int test; // = 26;
+            test = 0;
+            
             string taskTemp = this.TaskTextBox.Text;
+
+            try
+            {
+                test = Int32.Parse(this.TaskTextBox.Text);
+            }
+            catch (Exception ex)
+            {
+               
+            }
+            
+
             FeaturesOfTask featureoftask = (FeaturesOfTask)Enum.Parse(typeof(FeaturesOfTask), this.FOTComboBox.Text);
 
             Quarter tmp = new Quarter(taskTemp, featureoftask);
+
+            if (test > 0)
+            {
+                Quarter tmp2 = new Quarter(test, featureoftask);
+            }
+            
 
             int flag = int.Parse(NumberComboBox.Text);
 

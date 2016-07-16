@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace EisenhowerMatrix
 {
@@ -18,7 +19,13 @@ namespace EisenhowerMatrix
         {
             this.Task = task;
             // i thign better to use in Task class
-            this.FeatureOfTask = featureoftask;     
+            this.FeatureOfTask = featureoftask;   
+        }
+
+        // Polymorphism
+        public Quarter (int task, FeaturesOfTask featureoftask)
+        {
+            MessageBox.Show("You have entered the same number", "Warning");
         }
     }
 }
