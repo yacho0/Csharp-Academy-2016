@@ -58,14 +58,14 @@ namespace EisenhowerMatrix
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            int test; // = 26;
-            test = 0;
+            int numberstask;
+            numberstask = 0;
             
             string taskTemp = this.TaskTextBox.Text;
 
             try
             {
-                test = Int32.Parse(this.TaskTextBox.Text);
+                numberstask = Int32.Parse(this.TaskTextBox.Text);
             }
             catch (Exception ex)
             {
@@ -77,9 +77,9 @@ namespace EisenhowerMatrix
 
             Quarter tmp = new Quarter(taskTemp, featureoftask);
 
-            if (test > 0)
+            if (numberstask > 0)
             {
-                Quarter tmp2 = new Quarter(test, featureoftask);
+                Quarter tmp2 = new Quarter(numberstask, featureoftask);
             }
             
 
