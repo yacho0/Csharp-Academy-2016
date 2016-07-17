@@ -27,6 +27,8 @@ namespace EisenhowerMatrix
         public ObservableCollection<Quarter> TaskList3 { get; set; }
         public ObservableCollection<Quarter> TaskList4 { get; set; }
         public Settings settings;
+        public Quarter[] DeleteTasksList { get; set; }
+
 
         public int[] NumberList = { 1, 2, 3, 4 };
 
@@ -40,6 +42,7 @@ namespace EisenhowerMatrix
             TaskList3 = new ObservableCollection<Quarter>();
             TaskList4 = new ObservableCollection<Quarter>();
             this.settings = new Settings();
+
 
 
             this.NumberComboBox.ItemsSource = NumberList;
@@ -70,7 +73,7 @@ namespace EisenhowerMatrix
             {
                
             }
-            
+     
 
             FeaturesOfTask featureoftask = (FeaturesOfTask)Enum.Parse(typeof(FeaturesOfTask), this.FOTComboBox.Text);
 
@@ -105,11 +108,20 @@ namespace EisenhowerMatrix
         {
             int flag = int.Parse(NumberComboBox.Text);
 
+            //int tmp;
+            
             if (flag == 1)
             {
+                //próba zrobienia arichiwziwania usuwanych zadań z matrycy. spr kwestie listy
+                //tmp = this.ListView1.SelectedIndex;
+                //copy to array
+                //this.TaskList1.CopyTo(DeleteTasksList, this.ListView1.SelectedIndex);
+
                 try
                 {
-                    this.TaskList1.RemoveAt(this.ListView1.SelectedIndex);
+
+                    this.TaskList1.RemoveAt(this.ListView1.SelectedIndex);   //tego nie robiło. czemu? bo był problem z copowaniem...
+                   
                 }
                 catch (Exception ex)
                 {
@@ -183,6 +195,20 @@ namespace EisenhowerMatrix
         private void WhiteButton_Click(object sender, RoutedEventArgs e)
         {
             this.Background = Brushes.White;
+        }
+
+        private void DelteButton_Click(object sender, RoutedEventArgs e)
+        {
+            //DeleteListWindow1 wnd = new DeleteListWindow1();
+            //wnd.Show();
+        }
+
+        private void YearsButton_Click(object sender, RoutedEventArgs e)
+        {
+            Calculator CalculatorObject = new Calculator();
+
+            CalculatorObject.GiveYears(settings.Age);
+
         }
     }
 }

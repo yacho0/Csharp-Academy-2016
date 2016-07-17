@@ -55,10 +55,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Matrix.cs" />
+    <Compile Include="Archives.cs" />
+    <Compile Include="Calculator.cs" />
+    <Compile Include="DeleteListWindow1.xaml.cs">
+      <DependentUpon>DeleteListWindow1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Settings.cs" />
     <Compile Include="ShowText.cs" />
     <Compile Include="SuperShowText.cs" />
+    <Page Include="DeleteListWindow1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

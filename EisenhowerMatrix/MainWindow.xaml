@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EisenhowerMatrix"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="900">
+        Title="MainWindow" Height="450" Width="1000">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -68,6 +68,8 @@
                     <Button Content="Red" Name="RedButton" Margin="10,5" Click="RedButton_Click" />
                     <Button Content="Blue" Name="BlueButton" Margin="10,5" Click="BlueButton_Click"/>
                     <Button Content="White" Name="WhiteButton" Margin="10,5" Click="WhiteButton_Click"/>
+                    <Button Content="DList" Name="DelteButton" Click="DelteButton_Click"/>
+                    <Button Content="Count years" Name="YearsButton" Margin="10,5" Click="YearsButton_Click"/>
                 </StackPanel>
             </StackPanel>
         </StackPanel>

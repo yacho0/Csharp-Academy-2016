@@ -26,3 +26,5 @@ C:\EisenhowerMatrix\EisenhowerMatrix\obj\Debug\MainWindow.baml
 C:\EisenhowerMatrix\EisenhowerMatrix\obj\Debug\EisenhowerMatrix.g.resources
 C:\EisenhowerMatrix\EisenhowerMatrix\obj\Debug\EisenhowerMatrix.Properties.Resources.resources
 C:\EisenhowerMatrix\EisenhowerMatrix\obj\Debug\EisenhowerMatrix.csproj.GenerateResource.Cache
+C:\EisenhowerMatrix\EisenhowerMatrix\obj\Debug\DeleteListWindow1.g.cs
+C:\EisenhowerMatrix\EisenhowerMatrix\obj\Debug\DeleteListWindow1.baml
