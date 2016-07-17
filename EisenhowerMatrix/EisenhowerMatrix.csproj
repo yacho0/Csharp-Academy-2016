@@ -55,11 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Archives.cs" />
     <Compile Include="Calculator.cs" />
     <Compile Include="Settings.cs" />
-    <Compile Include="ShowText.cs" />
-    <Compile Include="SuperShowText.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

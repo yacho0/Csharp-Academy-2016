@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace EisenhowerMatrix
+namespace EisenhowerMatrix 
 {
-    class Calculator
+    class Calculator: Settings
     {
         public int Years;
         public int Days;
@@ -15,7 +15,8 @@ namespace EisenhowerMatrix
 
         public void GiveOddTime(int age)
         {
-            Years = 75 - age;
+            // Variable averageyear is inheritance from class Settings
+            Years = averageyear - age;
             Days = Years * 365;
             Hours = Days * 24;
 

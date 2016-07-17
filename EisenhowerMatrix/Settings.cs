@@ -10,6 +10,7 @@ namespace EisenhowerMatrix
     public class Settings: INotifyPropertyChanged
     {
         private int age = 26;
+        public int averageyear = 75;
 
         public int Age
         {
