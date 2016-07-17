@@ -5,14 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EisenhowerMatrix"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="1000">
+        Title="Support matrix" Height="450" Width="1200">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
+            <!--<ColumnDefinition Width="1*"/>-->
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4.5*"/>
             <RowDefinition Height="4*"/>
             <RowDefinition Height="4*"/>
         </Grid.RowDefinitions>
@@ -48,29 +49,55 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <StackPanel Grid.Column="0" Grid.Row="0" Margin="20,5">
-            <StackPanel Orientation="Horizontal">
-                <TextBox Name="TaskTextBox" Width="150" Margin="10,5"/>
-                <Button Content="Add" Name="AddButton" Margin="10,5" Click="AddButton_Click"/>
-                <Button Content="Delete" Name="DeleteButton" Margin="10,5" Click="DeleteButton_Click"/>
-                <Button Content="Clr all"  Name="ClearButton" Width="40" Margin="10,5" Click="ClearButton_Click"/>
+        <StackPanel Grid.Column="0" Grid.Row="0">
+            <StackPanel Orientation="Horizontal" Margin="10,5">
+                <Label Content="Enter the task"/>
+                <TextBox Name="TaskTextBox" Width="120" Margin="10,5"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10,5">
+                <Label Content="Select the number of quarters"/>
+                <ComboBox Name="NumberComboBox" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10,5">
+                <Label Content="Select the feature of task"/>
+                <ComboBox Name="FOTComboBox" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10,5">
+                <Label Content="Click the key and add task"/>
+                <Button Content="Add" Name="AddButton" Click="AddButton_Click"/>
             </StackPanel>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="0">
-            <StackPanel Orientation="Horizontal" Margin="10,5">
-                <ComboBox Name="NumberComboBox" Margin="10,5"/>
-                <ComboBox Name="FOTComboBox" Margin="10,5"/>
+            <StackPanel  Margin="10,5">
                 <StackPanel Orientation="Horizontal" Margin="10,5">
-                    <Label Content="Age"/>
+                    <Label Content="If you want delete task select task in quarts, select number of quart (look left) and click key" />
+                    <Button Content="Delete" Name="DeleteButton" Click="DeleteButton_Click"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="10,5">
+                    <Label Content="If you want to delete all tasks click key " />
+                    <Button Content="Clear all"  Name="ClearButton" Width="50" Click="ClearButton_Click"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="10,5">
+                    <Label Content="Set your old" />
                     <Button Width="20" Content="-" Click="MinusButton_Click"/>
                     <TextBox Name="AgeTextBox" Width="50" Text="{Binding Path=Age}"/>
                     <Button Width="20" Content="+" Click="PlusButton_Click"/>
+                    <Label Content=" and click key"/>
+                    <Button Content="Count years" Name="YearsButton" Click="YearsButton_Click"/>
+                    <Label Content=" if you want check your odd Time." />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="10,5">
+                    <Label Content="Select color of this panel"/>
                     <Button Content="Red" Name="RedButton" Margin="10,5" Click="RedButton_Click" />
                     <Button Content="Blue" Name="BlueButton" Margin="10,5" Click="BlueButton_Click"/>
+                    <Button Content="Green" Name="GreenButton" Margin="10,5" Click="GreenButton_Click"/>
                     <Button Content="White" Name="WhiteButton" Margin="10,5" Click="WhiteButton_Click"/>
-                    <Button Content="Count years" Name="YearsButton" Margin="10,5" Click="YearsButton_Click"/>
                 </StackPanel>
             </StackPanel>
         </StackPanel>
+        <!--<StackPanel Grid.Column="2" Grid.Row="1" Margin="5">
+            <Label Content="Enter the task:"/>
+            <TextBox Name="TaskTextBox" Width="80" Margin="122,0,118,0"/>
+        </StackPanel>-->
     </Grid>
 </Window>

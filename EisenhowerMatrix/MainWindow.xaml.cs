@@ -118,7 +118,7 @@ namespace EisenhowerMatrix
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Choose correct numeber of list.", "Delete tasks");
+                    MessageBox.Show("Choose correct numeber of quart or select task to delete.", "Delete tasks");
                 }
             }
 
@@ -130,7 +130,7 @@ namespace EisenhowerMatrix
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Choose correct numeber of list.", "Delete tasks");
+                    MessageBox.Show("Choose correct numeber of quart or select task to delete.", "Delete tasks");
                 }
             }
             if (flag == 3)
@@ -141,7 +141,7 @@ namespace EisenhowerMatrix
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Choose correct numeber of list.", "Delete tasks");
+                    MessageBox.Show("Choose correct numeber of quart or select task to delete.", "Delete tasks");
                 }
             }
             if (flag == 4)
@@ -152,7 +152,7 @@ namespace EisenhowerMatrix
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Choose correct numeber of list.", "Delete tasks");
+                    MessageBox.Show("Choose correct numeber of quart or select task to delete.", "Delete tasks");
                 }
             }
 
@@ -197,6 +197,11 @@ namespace EisenhowerMatrix
 
             CalculatorObject.GiveOddTime(settings.Age);
 
+        }
+
+        private void GreenButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Background = Brushes.Green;
         }
     }
 }
