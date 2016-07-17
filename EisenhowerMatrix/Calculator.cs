@@ -13,19 +13,17 @@ namespace EisenhowerMatrix
         public int Days;
         public int Hours;
 
-        public void GiveYears(int age)
+        public void GiveOddTime(int age)
         {
             Years = 75 - age;
+            Days = Years * 365;
+            Hours = Days * 24;
 
-            MessageBox.Show("On average, you will live yet: " + Years.ToString(), "You odd years" );
-        }
-
-        public Calculator ()//int years, int days, int hours)     //??
-        {
-            //this.Years = years;
-            //this.Days = days;
-            //this.Hours = hours;
-
+            MessageBox.Show("On average, you will live yet "
+                + Years.ToString() + " years. This is "
+                + Days.ToString() + " days. This is "
+                + Hours.ToString() + " hours."
+                , "You odd years");
         }
 
     }

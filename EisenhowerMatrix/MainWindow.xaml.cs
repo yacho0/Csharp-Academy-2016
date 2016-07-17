@@ -112,16 +112,9 @@ namespace EisenhowerMatrix
             
             if (flag == 1)
             {
-                //próba zrobienia arichiwziwania usuwanych zadań z matrycy. spr kwestie listy
-                //tmp = this.ListView1.SelectedIndex;
-                //copy to array
-                //this.TaskList1.CopyTo(DeleteTasksList, this.ListView1.SelectedIndex);
-
                 try
                 {
-
-                    this.TaskList1.RemoveAt(this.ListView1.SelectedIndex);   //tego nie robiło. czemu? bo był problem z copowaniem...
-                   
+                    this.TaskList1.RemoveAt(this.ListView1.SelectedIndex);  
                 }
                 catch (Exception ex)
                 {
@@ -197,17 +190,12 @@ namespace EisenhowerMatrix
             this.Background = Brushes.White;
         }
 
-        private void DelteButton_Click(object sender, RoutedEventArgs e)
-        {
-            //DeleteListWindow1 wnd = new DeleteListWindow1();
-            //wnd.Show();
-        }
 
         private void YearsButton_Click(object sender, RoutedEventArgs e)
         {
             Calculator CalculatorObject = new Calculator();
 
-            CalculatorObject.GiveYears(settings.Age);
+            CalculatorObject.GiveOddTime(settings.Age);
 
         }
     }

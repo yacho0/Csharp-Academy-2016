@@ -9,7 +9,7 @@ namespace EisenhowerMatrix
 {
     public class Settings: INotifyPropertyChanged
     {
-        private int age = 15;
+        private int age = 26;
 
         public int Age
         {
