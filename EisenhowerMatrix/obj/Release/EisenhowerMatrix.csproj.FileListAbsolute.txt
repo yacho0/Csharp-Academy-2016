@@ -1,0 +1,14 @@
+C:\EisenhowerMatrix\EisenhowerMatrix\bin\Release\EisenhowerMatrix.exe.config
+C:\EisenhowerMatrix\EisenhowerMatrix\bin\Release\EisenhowerMatrix.exe
+C:\EisenhowerMatrix\EisenhowerMatrix\bin\Release\EisenhowerMatrix.pdb
+C:\EisenhowerMatrix\EisenhowerMatrix\obj\Release\EisenhowerMatrix.csprojResolveAssemblyReference.cache
+C:\EisenhowerMatrix\EisenhowerMatrix\obj\Release\MainWindow.g.cs
+C:\EisenhowerMatrix\EisenhowerMatrix\obj\Release\App.g.cs
+C:\EisenhowerMatrix\EisenhowerMatrix\obj\Release\EisenhowerMatrix_MarkupCompile.cache
+C:\EisenhowerMatrix\EisenhowerMatrix\obj\Release\EisenhowerMatrix_MarkupCompile.lref
+C:\EisenhowerMatrix\EisenhowerMatrix\obj\Release\MainWindow.baml
+C:\EisenhowerMatrix\EisenhowerMatrix\obj\Release\EisenhowerMatrix.g.resources
+C:\EisenhowerMatrix\EisenhowerMatrix\obj\Release\EisenhowerMatrix.Properties.Resources.resources
+C:\EisenhowerMatrix\EisenhowerMatrix\obj\Release\EisenhowerMatrix.csproj.GenerateResource.Cache
+C:\EisenhowerMatrix\EisenhowerMatrix\obj\Release\EisenhowerMatrix.exe
+C:\EisenhowerMatrix\EisenhowerMatrix\obj\Release\EisenhowerMatrix.pdb

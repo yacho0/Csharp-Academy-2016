@@ -62,7 +62,7 @@ namespace EisenhowerMatrix
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             int numberstask = 0;
-            
+
             string taskTemp = this.TaskTextBox.Text;
 
             try
@@ -71,9 +71,9 @@ namespace EisenhowerMatrix
             }
             catch (Exception ex)
             {
-               
+
             }
-     
+
 
             FeaturesOfTask featureoftask = (FeaturesOfTask)Enum.Parse(typeof(FeaturesOfTask), this.FOTComboBox.Text);
 
@@ -83,7 +83,7 @@ namespace EisenhowerMatrix
             {
                 Quarter tmp2 = new Quarter(numberstask, featureoftask);
             }
-            
+
 
             int flag = int.Parse(NumberComboBox.Text);
 
@@ -109,53 +109,40 @@ namespace EisenhowerMatrix
             int flag = int.Parse(NumberComboBox.Text);
 
             //int tmp;
-            
-            if (flag == 1)
+
+
+            try
             {
-                try
-                {
-                    this.TaskList1.RemoveAt(this.ListView1.SelectedIndex);  
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Choose correct numeber of quart or select task to delete.", "Delete tasks");
-                }
+                this.TaskList1.RemoveAt(this.ListView1.SelectedIndex);
+            }
+            catch (Exception ex)
+            {
             }
 
-            if (flag == 2)
+            try
             {
-                try
-                {
-                    this.TaskList2.RemoveAt(this.ListView2.SelectedIndex);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Choose correct numeber of quart or select task to delete.", "Delete tasks");
-                }
+                this.TaskList2.RemoveAt(this.ListView2.SelectedIndex);
             }
-            if (flag == 3)
+            catch (Exception ex)
             {
-                try
-                {
-                    this.TaskList3.RemoveAt(this.ListView3.SelectedIndex);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Choose correct numeber of quart or select task to delete.", "Delete tasks");
-                }
-            }
-            if (flag == 4)
-            {
-                try
-                {
-                    this.TaskList4.RemoveAt(this.ListView4.SelectedIndex);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Choose correct numeber of quart or select task to delete.", "Delete tasks");
-                }
             }
 
+
+            try
+            {
+                this.TaskList3.RemoveAt(this.ListView3.SelectedIndex);
+            }
+            catch (Exception ex)
+            {
+            }
+
+            try
+            {
+                this.TaskList4.RemoveAt(this.ListView4.SelectedIndex);
+            }
+            catch (Exception ex)
+            {
+            }
         }
         private void MinusButton_Click(object sender, RoutedEventArgs e)
         {
