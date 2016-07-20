@@ -20,7 +20,7 @@
         <ListView Name="ListView1" Grid.Column="0" Grid.Row="1" ItemsSource="{Binding TaskList1}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="1) Urgent and important" DisplayMemberBinding="{Binding Task}"/>
+                    <GridViewColumn   Header="1) Urgent and important" DisplayMemberBinding="{Binding Task}"/>
                     <GridViewColumn Header="Feature" DisplayMemberBinding="{Binding FeatureOfTask}"/>
                 </GridView>
             </ListView.View>
@@ -53,6 +53,9 @@
             <StackPanel Orientation="Horizontal" Margin="10,5">
                 <Label Content="Enter the task"/>
                 <TextBox Name="TaskTextBox" Width="120" Margin="10,5"/>
+                <Label Content="Save or load your matrix" Margin="100,0,0,0"/>
+                <Button Content="Save" Name="SaveButton" Margin="10,0,10,5" Click="SaveButton_Click"/>
+                <Button Content="Load" Name="LoadButton" Margin="10,0,10,5" Click="LoadButton_Click"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="10,5">
                 <Label Content="Select the number of quarters"/>
@@ -60,7 +63,7 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="10,5">
                 <Label Content="Select the feature of task"/>
-                <ComboBox Name="FOTComboBox" />
+                <ComboBox Width="70" Name="FOTComboBox" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="10,5">
                 <Label Content="Click the key and add task"/>
@@ -78,7 +81,7 @@
                     <Button Content="Clear all"  Name="ClearButton" Width="50" Click="ClearButton_Click"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="10,5">
-                    <Label Content="Set your old" />
+                    <Label Content="Set your age" />
                     <Button Width="20" Content="-" Click="MinusButton_Click"/>
                     <TextBox Name="AgeTextBox" Width="50" Text="{Binding Path=Age}"/>
                     <Button Width="20" Content="+" Click="PlusButton_Click"/>
@@ -95,9 +98,5 @@
                 </StackPanel>
             </StackPanel>
         </StackPanel>
-        <!--<StackPanel Grid.Column="2" Grid.Row="1" Margin="5">
-            <Label Content="Enter the task:"/>
-            <TextBox Name="TaskTextBox" Width="80" Margin="122,0,118,0"/>
-        </StackPanel>-->
     </Grid>
 </Window>

@@ -7,25 +7,28 @@ using System.Windows;
 
 namespace EisenhowerMatrix
 {
-    
-    public enum FeaturesOfTask { personal, work}
+
+    public enum FeaturesOfTask { personal, work }
 
     public class Quarter
     {
         public string Task { get; set; }
         public FeaturesOfTask FeatureOfTask { get; set; }
 
-        public Quarter (string task, FeaturesOfTask featureoftask)
+        public Quarter(string task, FeaturesOfTask featureoftask)
         {
             this.Task = task;
             // i thign better to use in Task class
-            this.FeatureOfTask = featureoftask;   
+            this.FeatureOfTask = featureoftask;
         }
 
         // Polymorphism. Using the same function with diffrent typs parameters
-        public Quarter (int task, FeaturesOfTask featureoftask)
+        public Quarter(int task, FeaturesOfTask featureoftask)
         {
             MessageBox.Show("You have entered the same number", "Warning");
         }
+
+        public Quarter() { }
+
     }
 }

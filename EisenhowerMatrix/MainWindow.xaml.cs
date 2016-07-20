@@ -26,8 +26,9 @@ namespace EisenhowerMatrix
         public ObservableCollection<Quarter> TaskList2 { get; set; }
         public ObservableCollection<Quarter> TaskList3 { get; set; }
         public ObservableCollection<Quarter> TaskList4 { get; set; }
+        public Collection<ObservableCollection<Quarter>> MultiTaskList { get; set; }
         public Settings settings;
-        public Quarter[] DeleteTasksList { get; set; }
+        // Quarter[] DeleteTasksList { get; set; }
 
 
         public int[] NumberList = { 1, 2, 3, 4 };
@@ -41,9 +42,8 @@ namespace EisenhowerMatrix
             TaskList2 = new ObservableCollection<Quarter>();
             TaskList3 = new ObservableCollection<Quarter>();
             TaskList4 = new ObservableCollection<Quarter>();
+            MultiTaskList = new Collection<ObservableCollection<Quarter>>();  //{ TaskList1, TaskList2, TaskList3, TaskList4 }
             this.settings = new Settings();
-
-
 
             this.NumberComboBox.ItemsSource = NumberList;
             this.NumberComboBox.SelectedIndex = 0;
@@ -52,8 +52,6 @@ namespace EisenhowerMatrix
             this.FOTComboBox.ItemsSource = Enum.GetValues(typeof(FeaturesOfTask));
             this.FOTComboBox.SelectedIndex = 0;
 
-
-            // tmp = (Colors)Enum.Parse(typeof(Colors),ColorComboBox.Text);
 
             this.AgeTextBox.DataContext = settings;
 
@@ -71,7 +69,8 @@ namespace EisenhowerMatrix
             }
             catch (Exception ex)
             {
-
+                //Nothing using
+                ex = new Exception();
             }
 
 
@@ -117,6 +116,8 @@ namespace EisenhowerMatrix
             }
             catch (Exception ex)
             {
+                //Nothing using
+                ex = new Exception();
             }
 
             try
@@ -125,6 +126,8 @@ namespace EisenhowerMatrix
             }
             catch (Exception ex)
             {
+                //Nothing using
+                ex = new Exception();
             }
 
 
@@ -134,6 +137,8 @@ namespace EisenhowerMatrix
             }
             catch (Exception ex)
             {
+                //Nothing using
+                ex = new Exception();
             }
 
             try
@@ -142,6 +147,8 @@ namespace EisenhowerMatrix
             }
             catch (Exception ex)
             {
+                //Nothing using
+                ex = new Exception();
             }
         }
         private void MinusButton_Click(object sender, RoutedEventArgs e)
@@ -189,6 +196,123 @@ namespace EisenhowerMatrix
         private void GreenButton_Click(object sender, RoutedEventArgs e)
         {
             this.Background = Brushes.Green;
+        }
+
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.SaveFileDialog dlg = new Microsoft.Win32.SaveFileDialog();
+            dlg.FileName = "Matrix"; // Default file name
+            dlg.DefaultExt = ".xml";
+            dlg.Filter = "XML documents (.xml)|*.xml";
+
+            Nullable<bool> result = dlg.ShowDialog();
+            if (result == true)
+            {
+                string filePath = dlg.FileName;
+
+                ListToXmlFile(filePath);
+            }
+        }
+
+        private void ListToXmlFile(string filePath)
+        {
+            MultiTaskList.Add(TaskList1);
+            MultiTaskList.Add(TaskList2);
+            MultiTaskList.Add(TaskList3);
+            MultiTaskList.Add(TaskList4);
+
+
+            using (var sw = new StreamWriter(filePath))
+            {
+                var serializer = new XmlSerializer(typeof(Collection<ObservableCollection<Quarter>>));
+                serializer.Serialize(sw, MultiTaskList);
+            }
+
+            //Without clr is problem because number of items in collection increase too much.
+            MultiTaskList.Clear();
+        }
+
+        private void LoadButton_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            dlg.DefaultExt = ".xml";
+            dlg.Filter = "XML documents (.xml)|*.xml";
+
+            Nullable<bool> result = dlg.ShowDialog();
+            string filename = "";
+            if (result == true)
+            {
+                filename = dlg.FileName;
+            }
+
+            if (File.Exists(filename))
+            {
+                XmlFileToList(filename);
+            }
+            else
+            {
+                MessageBox.Show(@"Such file doesn't exist");
+            }
+        }
+
+        public ObservableCollection<Quarter> Tmp { get; set; }
+        public Quarter tmp { get; set; }
+
+
+        private void XmlFileToList(string filename)
+        {
+            MultiTaskList.Clear();
+
+            using (var sr = new StreamReader(filename))
+            {
+                // 1,2,3,4 quarts add to MulitTaskList
+                var deserializer = new XmlSerializer(typeof(Collection<ObservableCollection<Quarter>>));
+                Collection<ObservableCollection<Quarter>> tmpList = (Collection<ObservableCollection<Quarter>>)deserializer.Deserialize(sr);
+                foreach (var item in tmpList)
+                {
+                    MultiTaskList.Add(item);
+                }
+            }
+
+            //temp form
+            Tmp = new ObservableCollection<Quarter>();
+            tmp = new Quarter();
+
+            int i = 0;
+            Tmp = MultiTaskList.ElementAt(0);
+            foreach (var item in Tmp)
+            {
+                tmp = Tmp.ElementAt(i);
+                TaskList1.Add(tmp);
+                i++;
+            }
+
+            Tmp = MultiTaskList.ElementAt(1);
+            i = 0;
+            foreach (var item in Tmp)
+            {
+                tmp = Tmp.ElementAt(i);
+                TaskList2.Add(tmp);
+                i++;
+            }
+
+            Tmp = MultiTaskList.ElementAt(2);
+            i = 0;
+            foreach (var item in Tmp)
+            {
+                tmp = Tmp.ElementAt(i);
+                TaskList3.Add(tmp);
+                i++;
+            }
+            Tmp = MultiTaskList.ElementAt(3);
+            i = 0;
+            foreach (var item in Tmp)
+            {
+                tmp = Tmp.ElementAt(i);
+                TaskList4.Add(tmp);
+                i++;
+            }
+
         }
     }
 }
