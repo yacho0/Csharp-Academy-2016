@@ -56,23 +56,21 @@ namespace EisenhowerMatrix
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             int numberstask = 0;
-
-            string taskTemp = this.TaskTextBox.Text;
-
+            string buftask = this.TaskTextBox.Text;
+            
+            //Avoid problem with write string like int by exception
             try
             {
                 numberstask = Int32.Parse(this.TaskTextBox.Text);
             }
             catch (Exception ex)
             {
-                //Nothing using
+                //Avoid warning about dont use "ex"
                 ex = new Exception();
             }
-
-
+            
             FeaturesOfTask featureoftask = (FeaturesOfTask)Enum.Parse(typeof(FeaturesOfTask), this.FOTComboBox.Text);
-
-            Quarter tmp = new Quarter(taskTemp, featureoftask);
+            Quarter tmp = new Quarter(buftask, featureoftask);
 
             if (numberstask > 0)
             {
@@ -80,9 +78,9 @@ namespace EisenhowerMatrix
             }
 
 
-            int flag = int.Parse(NumberComboBox.Text);
+            int numberofquart = int.Parse(NumberComboBox.Text);
 
-            switch (flag)
+            switch (numberofquart)
             {
                 case 1:
                     TaskList1.Add(tmp);
@@ -107,7 +105,7 @@ namespace EisenhowerMatrix
             }
             catch (Exception ex)
             {
-                //Nothing using
+                //Avoid warning about dont use "ex"
                 ex = new Exception();
             }
 
@@ -117,7 +115,6 @@ namespace EisenhowerMatrix
             }
             catch (Exception ex)
             {
-                //Nothing using
                 ex = new Exception();
             }
 
@@ -128,7 +125,6 @@ namespace EisenhowerMatrix
             }
             catch (Exception ex)
             {
-                //Nothing using
                 ex = new Exception();
             }
 
@@ -138,7 +134,6 @@ namespace EisenhowerMatrix
             }
             catch (Exception ex)
             {
-                //Nothing using
                 ex = new Exception();
             }
         }
@@ -247,8 +242,8 @@ namespace EisenhowerMatrix
             }
         }
 
-        public ObservableCollection<Quarter> Tmp { get; set; }
-        public Quarter tmp { get; set; }
+        public ObservableCollection<Quarter> BufTaskList { get; set; }
+        public Quarter BufTask { get; set; }
 
 
         private void XmlFileToList(string filename)
@@ -271,42 +266,41 @@ namespace EisenhowerMatrix
                 }
             }
 
-            //temp form
-            Tmp = new ObservableCollection<Quarter>();
-            tmp = new Quarter();
+            BufTaskList = new ObservableCollection<Quarter>();
+            BufTask = new Quarter();
 
             int i = 0;
-            Tmp = MultiTaskList.ElementAt(0);
-            foreach (var item in Tmp)
+            BufTaskList = MultiTaskList.ElementAt(0);
+            foreach (var item in BufTaskList)
             {
-                tmp = Tmp.ElementAt(i);
-                TaskList1.Add(tmp);
+                BufTask = BufTaskList.ElementAt(i);
+                TaskList1.Add(BufTask);
                 i++;
             }
 
-            Tmp = MultiTaskList.ElementAt(1);
+            BufTaskList = MultiTaskList.ElementAt(1);
             i = 0;
-            foreach (var item in Tmp)
+            foreach (var item in BufTaskList)
             {
-                tmp = Tmp.ElementAt(i);
-                TaskList2.Add(tmp);
+                BufTask = BufTaskList.ElementAt(i);
+                TaskList2.Add(BufTask);
                 i++;
             }
 
-            Tmp = MultiTaskList.ElementAt(2);
+            BufTaskList = MultiTaskList.ElementAt(2);
             i = 0;
-            foreach (var item in Tmp)
+            foreach (var item in BufTaskList)
             {
-                tmp = Tmp.ElementAt(i);
-                TaskList3.Add(tmp);
+                BufTask = BufTaskList.ElementAt(i);
+                TaskList3.Add(BufTask);
                 i++;
             }
-            Tmp = MultiTaskList.ElementAt(3);
+            BufTaskList = MultiTaskList.ElementAt(3);
             i = 0;
-            foreach (var item in Tmp)
+            foreach (var item in BufTaskList)
             {
-                tmp = Tmp.ElementAt(i);
-                TaskList4.Add(tmp);
+                BufTask = BufTaskList.ElementAt(i);
+                TaskList4.Add(BufTask);
                 i++;
             }
 
