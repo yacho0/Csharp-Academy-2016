@@ -216,6 +216,7 @@ namespace EisenhowerMatrix
 
         private void ListToXmlFile(string filePath)
         {
+            MultiTaskList.Clear();
             MultiTaskList.Add(TaskList1);
             MultiTaskList.Add(TaskList2);
             MultiTaskList.Add(TaskList3);
@@ -229,7 +230,7 @@ namespace EisenhowerMatrix
             }
 
             //Without clr is problem because number of items in collection increase too much.
-            MultiTaskList.Clear();
+            this.MultiTaskList.Clear();
         }
 
         private void LoadButton_Click(object sender, RoutedEventArgs e)
@@ -261,7 +262,13 @@ namespace EisenhowerMatrix
 
         private void XmlFileToList(string filename)
         {
+            // miało kasować, ale nie kasuje...
             MultiTaskList.Clear();
+            TaskList1.Clear();
+            TaskList2.Clear();
+            TaskList3.Clear();
+            TaskList4.Clear();
+
 
             using (var sr = new StreamReader(filename))
             {

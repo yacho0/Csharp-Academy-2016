@@ -20,15 +20,15 @@
         <ListView Name="ListView1" Grid.Column="0" Grid.Row="1" ItemsSource="{Binding TaskList1}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn   Header="1) Urgent and important" DisplayMemberBinding="{Binding Task}"/>
+                    <GridViewColumn Header="1) Urgent and important" DisplayMemberBinding="{Binding Task}"/>
                     <GridViewColumn Header="Feature" DisplayMemberBinding="{Binding FeatureOfTask}"/>
                 </GridView>
             </ListView.View>
         </ListView>
         <ListView Name="ListView2" Grid.Column="1" Grid.Row="1" ItemsSource="{Binding TaskList2}">
             <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="2) Important" DisplayMemberBinding="{Binding Task}"/>
+                <GridView>                             
+                    <GridViewColumn Width="150" Header="2) Important                  " DisplayMemberBinding="{Binding Task}"/>
                     <GridViewColumn Header="Feature" DisplayMemberBinding="{Binding FeatureOfTask}"/>
                 </GridView>
             </ListView.View>
@@ -44,7 +44,7 @@
         <ListView Name="ListView4" Grid.Column="1" Grid.Row="2" ItemsSource="{Binding TaskList4}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="4) Less important" DisplayMemberBinding="{Binding Task}"/>
+                    <GridViewColumn Width="150" Header="4) Less important             " DisplayMemberBinding="{Binding Task}"/>
                     <GridViewColumn Header="Feature" DisplayMemberBinding="{Binding FeatureOfTask}"/>
                 </GridView>
             </ListView.View>
