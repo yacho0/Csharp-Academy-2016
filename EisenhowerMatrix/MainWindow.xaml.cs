@@ -28,8 +28,6 @@ namespace EisenhowerMatrix
         public ObservableCollection<Quarter> TaskList4 { get; set; }
         public Collection<ObservableCollection<Quarter>> MultiTaskList { get; set; }
         public Settings settings;
-        // Quarter[] DeleteTasksList { get; set; }
-
 
         public int[] NumberList = { 1, 2, 3, 4 };
 
@@ -42,7 +40,7 @@ namespace EisenhowerMatrix
             TaskList2 = new ObservableCollection<Quarter>();
             TaskList3 = new ObservableCollection<Quarter>();
             TaskList4 = new ObservableCollection<Quarter>();
-            MultiTaskList = new Collection<ObservableCollection<Quarter>>();  //{ TaskList1, TaskList2, TaskList3, TaskList4 }
+            MultiTaskList = new Collection<ObservableCollection<Quarter>>();
             this.settings = new Settings();
 
             this.NumberComboBox.ItemsSource = NumberList;
@@ -52,9 +50,7 @@ namespace EisenhowerMatrix
             this.FOTComboBox.ItemsSource = Enum.GetValues(typeof(FeaturesOfTask));
             this.FOTComboBox.SelectedIndex = 0;
 
-
             this.AgeTextBox.DataContext = settings;
-
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
@@ -105,11 +101,6 @@ namespace EisenhowerMatrix
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-            int flag = int.Parse(NumberComboBox.Text);
-
-            //int tmp;
-
-
             try
             {
                 this.TaskList1.RemoveAt(this.ListView1.SelectedIndex);
@@ -262,7 +253,6 @@ namespace EisenhowerMatrix
 
         private void XmlFileToList(string filename)
         {
-            // miało kasować, ale nie kasuje...
             MultiTaskList.Clear();
             TaskList1.Clear();
             TaskList2.Clear();

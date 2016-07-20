@@ -17,6 +17,7 @@ namespace EisenhowerMatrix
         {
             // Variable averageyear is inheritance from class Settings
             Years = averageyear - age;
+
             Days = Years * 365;
             Hours = Days * 24;
 
